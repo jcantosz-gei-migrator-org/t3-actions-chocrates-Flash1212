@@ -1,7 +1,6 @@
 - [**Getting Started**](00.0_getting-started.md)
 - [**Introduction to Github Actions**](01.0_actions-intro.md)
   - [**About Actions**](01.1_actions-about.md)
-    - [Coletiv Case Study](01.1_actions-about.md#activity)
   - [**Pricing and Usage Limits**](01.2_actions-pricing.md)
   - [**Starter Workflows**](01.3_actions-starter-workflows.md)
   - [**Our Learning Path**](01.4_actions-hello.md)
