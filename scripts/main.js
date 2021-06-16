@@ -106,11 +106,38 @@ let main = async () => {
                 }
             );
             log("Pushing template to new repo", JSON.stringify(result));
+
+            result = await client.repos.addCollaborator({
+                owner: argv.org,
+                repo: repoName,
+                username: user,
+                permission: "admin",
+            });
+            log("Adding user as collaborator", JSON.stringify(result));
+
+            result = await client.repos.createPagesSite({
+                owner: argv.org,
+                repo: repoName,
+                source: { branch: "main", path: "/docs" },
+            });
+            log("Enabling pages site", JSON.stringify(result));
+
+            result = await client.repos.update({
+                owner: argv.org,
+                repo: repoName,
+                description: result.data.html_url,
+            });
+            log(
+                "Updating description to show the pages URL",
+                JSON.stringify(result)
+            );
         } catch (e) {
             console.error(e);
             client.repos.delete({ org: argv.org, name: repoName });
         } finally {
-            fs.rmdirSync(repo.name, { recursive: true });
+            fs.rmdirSync(`${argv.template.split("/")[1]}.git`, {
+                recursive: true,
+            });
         }
     }
 };
