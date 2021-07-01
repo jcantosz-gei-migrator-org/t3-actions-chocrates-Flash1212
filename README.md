@@ -7,5 +7,11 @@ Training exercise repository for GitHub Actions using a docker base. This reposi
   ```
   git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
   ```
-- Locate the `Exercises` folder
-- Follow [the directions](https://github.com/githubtraining/GitHub-Actions-Docker-training/blob/main/Exercises/README.md) for individual use cases at your leisure
+- Locate the `Exercises` folder 
+- Follow [the directions](https://github.com/githubtraining/GitHub-Actions-Docker-training/blob/main/Exercises/README.md) for individual use cases at your leisure   
+
+
+
+-
+
+# Stuff
